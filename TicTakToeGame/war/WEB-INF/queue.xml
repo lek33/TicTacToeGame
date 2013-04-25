@@ -1,0 +1,23 @@
+<queue-entries>  
+<queue>    
+<name>default</name>    
+<rate>1/s</rate>  
+</queue>  
+<queue>    
+<name>mail-queue</name>    
+<rate>2000/d</rate>    
+<bucket-size>10</bucket-size>  
+</queue>  
+<queue>    
+<name>background-processing</name>    
+<rate>5/s</rate>  
+</queue>
+<queue>    
+<name>pull-queue</name>    
+<mode>pull</mode>    
+<acl>      
+<user-email>bar@foo.com</user-email>      <!-- can list, get, lease, delete, and update tasks -->      
+<writer-email>user@gmail.com</writer-email> <!-- can insert tasks -->      
+<writer-email>bar@foo.com</writer-email>  <!-- can do all -->    </acl>  
+</queue>
+</queue-entries>
